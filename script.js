@@ -22,6 +22,7 @@ function LoadParagraphs()
 {
     const index = Math.floor(Math.random() * paragraphs.length);
     const typingtext = document.getElementById("text");
+    typingtext.innerHTML = "";
     paragraphs[index].split("").forEach(char => {
         let span = `<span>${char}</span>`
         typingtext.innerHTML += span;
@@ -78,6 +79,8 @@ function InitTyping()
         characters[charindex].classList.add("active");
         let wpm = Math.round(((charindex - errors) / 5) / (maxtime - timeleft) * 60);
         wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
+        cpm = wpm * 5;
+        cpmtext.innerHTML = cpm;
         wpmtext.innerHTML = wpm;
         errorstext.innerHTML = errors;
         
@@ -102,6 +105,20 @@ function initTimer() {
 
 function TestAgain() 
 {
+    const cpmtext = document.getElementById("cpm");
+    const wpmtext = document.getElementById("wpm");
+    const errorstext = document.getElementById("errors");
+    const inputfield = document.querySelector(".inputfield"); 
+    const timertext = document.getElementById("timer");
+    LoadParagraphs();
+    clearInterval(timer);
+    timeleft = maxtime;
+    charindex = errors = istyping = 0;
+    inputfield.value = "";
+    timertext.innerText = timeleft;
+    wpmtext.innerText = 0;
+    errorstext.innerText = 0;
+    cpmtext.innerText = 0;
 
 }
 window.onload = function() {
