@@ -1,0 +1,48 @@
+body 
+{
+    background-color:#3b444b;
+    font-family: 'Bree Serif', serif;
+}
+h1 {
+    color:white;
+    text-align:center;
+}
+.content
+{
+    color:white;
+}
+.resultdetails
+{
+    display:flex;
+    column-gap:5%;
+    list-style:none;
+    padding-left:0%;
+    margin-bottom:5%;
+    margin-left:5%;
+}
+.typingtext
+{
+    color:grey;
+    font-size:20px;
+    width:80%;
+    margin-left:5%;
+    word-wrap: normal;
+}
+.inputfield{
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+}
+
+#text span.correct
+{
+    color:white;
+}
+#text span.incorrect
+{
+    color:red;
+}
+#text span.active
+{
+    color:blue;
+}

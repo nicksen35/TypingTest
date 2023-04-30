@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Duck Typing Test </title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<script src="script.js"> </script>
+</head>
+<body>
+<div class="header">
+    <h1> Duck Typing Test </h1>
+</div>
+
+<input type="text" class="inputfield">
+<div class="typingtext">
+    <p id="text"></p>
+</div>
+<div class="content">
+    <ul class="resultdetails">
+        <li> Time Left: 
+            <span id="timer">60s</span>
+        </li>
+        <li>Errors: 
+            <span id="errors">0</span>
+        </li>
+        <li>WPM (Words Per Minute): 
+            <span id="wpm">0</span>
+        </li>
+        <li>CPM (Characters Per Minute): 
+            <span id="cpm">0</span>
+        </li>
+    </ul>
+    <button id="testagain" onclick="TestAgain()">Test Again</button>
+</div>
+</body>
+
+</html>
